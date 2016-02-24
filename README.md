@@ -1,6 +1,8 @@
 ### SSH host key fingerprints
 
-Use [RFC4255](https://tools.ietf.org/html/rfc4255) wherever possible.
+Use [RFC4255](https://tools.ietf.org/html/rfc4255)
+and [VerifyHostKeyDNS yes](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5?query=ssh_config&sec=5)
+wherever possible.
 
 Alternatively, provide signed fingerprint hashes using this script.
 
