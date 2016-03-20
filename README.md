@@ -20,68 +20,68 @@ Hash: SHA512
 example.com SSH host key fingerprints
 
 +---[DSA 1024]----+
-|        oo=++o+E=|  MD5:
-|         . =..o+*|    33:95:13:07:07:10:57:37:c3:ed:07:f8:5c:37:15:37
-|          +  o +o|
-|         . .  o o|  SHA1:
-|        S       .|    ae:ff:7e:a9:1d:51:b1:bb:ad:22:21:14:1a:ab:93:28:d4:a0:59:b0
-|         o       |
-|                 |  SHA256:
-|                 |    s+Hvdov6rSaURA0n3BbVgByRLB7pbwpAp/y6Tx4zEaA
-|                 |    B3E1EF768BFAAD2694440D27DC16D5801C912C1EE96F0A40A7FCBA4F1E3311A0
-+-----------------+
+|=B=+...          |     MD5 = be:7d:47:f5:46:e1:20:30:4d:e4:d2:3d:c9:6f:dd:72
+|o.+o.o.          |
+|.o..++o          |    SHA1 = b0:c4:57:91:db:e3:aa:a8:5c:ed:7b:eb:7b:ab:e1:99:d2:a9:f3:dc
+|. .....o .       |
+|  ..  o S        |  SHA256 = ueAe42uiVhRPpLfO3tk2JmwaPB2ATMAeCYUVAC69j3o
+|   o.= o o       |
+|  ... X.o        |   SSHFP = 2 1 B0C45791DBE3AAA85CED7BEB7BABE199D2A9F3DC
+| .E .+.*+o+      |
+|.o.. o*+o+..     |   SSHFP = 2 2 B9E01EE36BA256144FA4B7CEDED936266C1A3C1D804CC01E09851500 2EBD8F7A
++----[SHA256]-----+
 
 +---[ECDSA 521]---+
-|        ..+ . .  |  MD5:
-|         + = . o |    05:2f:5d:f7:92:ce:e9:f6:60:92:41:30:b4:8f:93:69
-|        . = . o .|
-|         o * o o |  SHA1:
-|        S E o +  |    bf:d9:df:46:06:f6:53:40:dc:45:b4:bb:5e:76:a0:4e:d0:51:66:9b
-|         . . +   |
-|            o =  |  SHA256:
-|             + o |    Zt1CuHBdQvZeJ7quUTpQ8BZcKWwOZWORjIbTcyfG/X8
-|                .|    66DD42B8705D42F65E27BAAE513A50F0165C296C0E6563918C86D37327C6FD7F
-+-----------------+
+|    . +.++Boo .. |     MD5 = fb:99:95:f4:e6:f7:ea:2c:cc:e8:e3:c8:39:aa:83:ba
+|   . + =+O** o  .|
+|    o . @=+o.. . |    SHA1 = 05:34:4d:24:ae:c5:da:c0:23:67:93:b1:6a:13:11:95:39:fe:de:e3
+|   . + E.=o . o  |
+|    + o S. . o   |  SHA256 = WCUX441Zc63q+R8MoYRNsB4kHymtYmoR3Y9tkJjeJ6U
+|   o        . o  |
+|  .        . . o |   SSHFP = 3 1 05344D24AEC5DAC0236793B16A13119539FEDEE3
+|            o   .|
+|             ....|   SSHFP = 3 2 582517E38D5973ADEAF91F0CA1844DB01E241F29AD626A11DD8F6D90 98DE27A5
++----[SHA256]-----+
 
 +--[ED25519 256]--+
-|                 |  MD5:
-|                 |    68:67:f6:2d:f2:7a:c0:93:ae:f4:10:3b:b2:7f:04:37
-|                 |
-|      ..E        |  SHA1:
-|      ++So       |    80:c9:72:9c:0d:78:6e:52:d7:d9:e6:2f:e2:28:c1:43:99:87:6f:9a
-|     . **. .     |
-|    . =o.oo .    |  SHA256:
-|     + +oo..     |    NhnXwcneUpZoPzQH9HyAV/dNDBNBpLP2HFBnQ9bFYpY
-|    ..oooo.      |    3619D7C1C9DE5296683F3407F47C8057F74D0C1341A4B3F61C506743D6C56296
-+-----------------+
+|   +.*..E.   .oo |     MD5 = 1a:1f:f2:28:70:f5:1a:12:c7:d8:0a:49:fd:b6:52:8a
+|  . O B . o ..o .|
+|   o B * o o . . |    SHA1 = bd:4e:82:cd:70:77:0b:21:9f:de:6f:1a:c9:76:1a:51:64:8a:c7:d7
+|  . . B = +   .  |
+|   . . oS+oo.. . |  SHA256 = zqbRdduYDPt60D1RaGEoi3MjcpCzwNgThdbsKPXhVgc
+|       + ..=.=o  |
+|      . = ..= .. |   SSHFP = 4 1 BD4E82CD70770B219FDE6F1AC9761A51648AC7D7
+|       +   ..    |
+|      .   .o.    |   SSHFP = 4 2 CEA6D175DB980CFB7AD03D516861288B73237290B3C0D81385D6EC28 F5E15607
++----[SHA256]-----+
 
 +---[RSA 4096]----+
-|B*  o            |  MD5:
-|=+.=             |    02:e4:a4:cc:4a:fa:a1:e8:0d:17:20:44:a3:91:40:b8
-|o++ o            |
-|E..  .           |  SHA1:
-|o ..  . S        |    fe:43:fe:bb:44:56:14:c2:fc:23:ab:e5:94:25:d5:4d:6d:8d:13:7f
-|.o ..  .         |
-|o...             |  SHA256:
-|. +              |    yEqu2cAuzAcuLzfCwLeMzp9g34zAIOnG94dn1IvGAjc
-| . .             |    C84AAED9C02ECC072E2F37C2C0B78CCE9F60DF8CC020E9C6F78767D48BC60237
-+-----------------+
+|+BO+O=. .        |     MD5 = 13:9a:3d:ae:2a:43:30:bd:32:54:83:24:8d:33:89:93
+|.+.O .oo         |
+|  = o oo         |    SHA1 = df:fb:61:17:11:c1:6d:09:1f:ad:29:ca:1b:bc:4d:ae:77:85:cd:c2
+| . + o  o        |
+|. . = .ES        |  SHA256 = mot7v8ONny6BK1UAUAsEx0jUuzZoVJHs21GpAnlZFL8
+| o = .oo.        |
+|. . ..oo +       |   SSHFP = 1 1 DFFB611711C16D091FAD29CA1BBC4DAE7785CDC2
+|    ..o.= ..     |
+|    o+..o*+      |   SSHFP = 1 2 9A8B7BBFC38D9F2E812B5500500B04C748D4BB36685491ECDB51A902 795914BF
++----[SHA256]-----+
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iQIcBAEBCgAGBQJWzgytAAoJELr//1/1/6qvmycQAKn39cXfJlPzeCU6h5Onhnb+
-5On5xsq0c4/BDmLjsC4EYQmhwaf781L1sSSusfTzyfJqDWvUVPeyDwSOXJFtD4gv
-BZb0sP8BG6hTHdg8kfM+tfb/7z+su0VbWDaX4s4EMNU5FbqwcPd38WZdEY3iHmeb
-odXtcJ5pbBoBlJcdgx6alt90yRrsUUO8SAXv/zd6Jr2I5WgvqjjzZSVjhc4v4rBv
-lXBSGDfTb66RCb9H46321+yudjvXNmIX6zz7G2MswSVt679yiSsdgaxT4fns1/WT
-SQPUTG5UZmQ/CUNQJ5PUZg22nsWQW9H7eFsTOEp32gOTbP3WCkwSD2SfigLoWdal
-U2gftRk2u1auzhVotHCyfZ6GRtWg8x5CdAqUJ2YTWdZ5Y+5D3YEdAmBhiBacfZBD
-AnUhLkCXlRIBDTX+o8p+S+tFQY7wesE7o/6E0kJXPXZwayGd+Pik6/fgFfdHK2l8
-aKRkFjY7VmfBqLevmWq59wdnQ+G3iWx1p38TPfM6OkZIjJB2Plv35ObtdxRz5s/Q
-GIr7cLH0CxXUWUFz5s0DraRlT61Tz4sQUlGb3t+MeyNMiEzlqAIjYKKXLw9Ehcjb
-FF3v1ImSCUWaYCW6jmndMBEtopAvZi3WQ6tmSp+K5uMtZL6J4GPp+NG/LF7aXdHj
-d92jzRDKe2ioo4B80t/Q
-=EPZf
+iQIcBAEBCgAGBQJW7fLdAAoJEMiXXyBDyl0kUJ8P/3W5xGku6Dj7FI3OVx8v+9aG
+CG/cP9ZMGryYbGmjiBaTYyHEsOMc54BzFcbOE8IzbNk/gEG/i+eLSZvIw9hAYNzi
+raPRVCFNLq32aytJ8KtyBMcUG+T6Ai1PJUHVfL11TC0esEb5V3D/8E2YOe3kRBuN
+xTAXPHNNDarZ0njXigT8E2azSDQ9+foxPxWvQ3vmgJF/BYkK/LH0rjqwZgU+eEzA
+AlDNLDm2Wq+IiVUtHQT29LmoyzPttiKUhSG15A4CWt+w/HPCcDLMn+13O1COBpsy
+l+4Kd+u7obTbX4pQ4lZpmUEzlG2945clFLgUHKxXtrS9RfBuAiQuG2DqkegS/qdF
+dAaZ2XLcaM8SDfZlLkh0JWgHnLYwgi+TYhLu4T6qsakUJJkx0ev5LbyX9SLiv03F
+HZmL33t0GziV5N4WpJ7t6BuW1++nDo9TQcaiWPvVGu6dkGccV6v7J/tsXkcjgrMH
+KqoP6QAOx1TACRtdgVpmgeFYsNHjFwpfwzf0rmhtjrwLV2VzKvq4AZmJFCgHRTEZ
+ndIV471562BhVEE6UM4Rz3PfUWTwSRxeoOG/NtBhV2Tk4mk8Vb9WfcMOCGVgq0kN
+nI4VNfrZWC2/uDFSWPYgcR+78GV7xcTzih45aycYVXHcaCDhO1z34MlTBWmHoqhB
+mMriMkDu/HgDCSwS3HyA
+=EJLV
 -----END PGP SIGNATURE-----
 ```
