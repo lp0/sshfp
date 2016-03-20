@@ -51,11 +51,11 @@ def sshfp(filename):
 		key_data = f.readline().split(" ")[1]
 		key_data = base64.b64decode(key_data)
 
-	visual_key[1] += "  MD5    = " + __with_colons(hashlib.md5(key_data))
-	visual_key[3] += "  SHA1   = " + __with_colons(hashlib.sha1(key_data))
+	visual_key[1] += "     MD5 = " + __with_colons(hashlib.md5(key_data))
+	visual_key[3] += "    SHA1 = " + __with_colons(hashlib.sha1(key_data))
 	visual_key[5] += "  SHA256 = " + __openssh_base64(hashlib.sha256(key_data))
-	visual_key[7] += "  SSHFP  = " + __sshfp_type(visual_key) + " 1 " + __dns_format(hashlib.sha1(key_data))
-	visual_key[9] += "  SSHFP  = " + __sshfp_type(visual_key) + " 2 " + __dns_format(hashlib.sha256(key_data))
+	visual_key[7] += "   SSHFP = " + __sshfp_type(visual_key) + " 1 " + __dns_format(hashlib.sha1(key_data))
+	visual_key[9] += "   SSHFP = " + __sshfp_type(visual_key) + " 2 " + __dns_format(hashlib.sha256(key_data))
 	print("\n".join(visual_key))
 
 if __name__ == "__main__":
