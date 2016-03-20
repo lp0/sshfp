@@ -20,9 +20,28 @@ import hashlib
 import subprocess
 import sys
 
-def __with_colons(hexdigest):
-	it = iter(hexdigest)
+def __with_colons(hash):
+	it = iter(hash.hexdigest().lower())
 	return ":".join(["".join(x) for x in zip(it, it)])
+
+def __openssh_base64(hash):
+	return base64.b64encode(hash.digest()).decode("ascii").strip("=")
+
+def __split_by_n(seq, n):
+	"""A generator to divide a sequence into chunks of n units."""
+	# http://stackoverflow.com/a/9475270/388191
+	while seq:
+		yield seq[:n]
+		seq = seq[n:]
+
+def __dns_format(hash):
+	return " ".join(__split_by_n(hash.hexdigest().upper(), 56))
+
+def __sshfp_type(visual_key):
+	for (key, value) in { "[RSA ": 1, "[DSA ": 2, "[ECDSA ": 3, "[ED25519 ": 4, }.items():
+		if key in visual_key[0]:
+			return str(value)
+	return "?"
 
 def sshfp(filename):
 	with subprocess.Popen(["ssh-keygen", "-l", "-v", "-f", filename], stdout=subprocess.PIPE, universal_newlines=True) as process:
@@ -32,20 +51,11 @@ def sshfp(filename):
 		key_data = f.readline().split(" ")[1]
 		key_data = base64.b64decode(key_data)
 
-	sshfp_type = "?"
-	for (key, value) in { "[RSA ": 1, "[DSA ": 2, "[ECDSA ": 3, "[ED25519 ": 4, }.items():
-		if key in visual_key[0]:
-			sshfp_type = value
-	sshfp_hash = hashlib.sha256(key_data).hexdigest().upper()
-
-	visual_key[0] += "  MD5:"
-	visual_key[1] += "    " + __with_colons(hashlib.md5(key_data).hexdigest())
-	visual_key[3] += "  SHA1:"
-	visual_key[4] += "    " + __with_colons(hashlib.sha1(key_data).hexdigest())
-	visual_key[6] += "  SHA256:"
-	visual_key[7] += "    " + base64.b64encode(hashlib.sha256(key_data).digest()).decode("ascii").strip("=")
-	visual_key[9] += "  SSHFP:"
-	visual_key[10] += "    " + str(sshfp_type) + " 2 " + sshfp_hash[0:56] + " " + sshfp_hash[56:]
+	visual_key[1] += "  MD5    = " + __with_colons(hashlib.md5(key_data))
+	visual_key[3] += "  SHA1   = " + __with_colons(hashlib.sha1(key_data))
+	visual_key[5] += "  SHA256 = " + __openssh_base64(hashlib.sha256(key_data))
+	visual_key[7] += "  SSHFP  = " + __sshfp_type(visual_key) + " 1 " + __dns_format(hashlib.sha1(key_data))
+	visual_key[9] += "  SSHFP  = " + __sshfp_type(visual_key) + " 2 " + __dns_format(hashlib.sha256(key_data))
 	print("\n".join(visual_key))
 
 if __name__ == "__main__":
