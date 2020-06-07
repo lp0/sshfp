@@ -1,4 +1,4 @@
-.PHONY: all clean example
+.PHONY: all clean example check
 
 all: $(shell find . -mindepth 1 -maxdepth 1 -not -name '.git' -type d -printf '%p.txt\n')
 
@@ -18,3 +18,6 @@ example:
 	@(echo "example.com SSH host key fingerprints"; echo; ./sshfp.py example_*.pub) | gpg2 --clearsign
 	@rm -f example_dsa example_rsa example_ecdsa example_ed25519
 	@rm -f example_dsa.pub example_rsa.pub example_ecdsa.pub example_ed25519.pub
+
+check:
+	for file in *.txt; do echo "$$file"; gpgv "$$file" || exit 1; echo; done
